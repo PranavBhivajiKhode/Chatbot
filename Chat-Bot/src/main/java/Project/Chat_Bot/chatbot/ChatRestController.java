@@ -18,11 +18,13 @@ public class ChatRestController {
 
 	@GetMapping("/query/{chat}")
 	public String generateResponse(@PathVariable String chat) {
-		try {
-			String response = answerGenerator.generateContent(chat);
-			return response;
-		}catch (Exception e) {
-			throw new RuntimeException(e);
-		}		
+		String answer = "response generated";
+		return answer;
+//		try {
+//			String response = answerGenerator.generateContent(chat);
+//			return response;
+//		}catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}		
 	}
 }
